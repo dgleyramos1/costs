@@ -26,7 +26,7 @@ const Projectcard = ({
                 <span className={`${styles[category.toLowerCase()]}`}></span> {category}
             </p>
             <div className={styles.project_card_actions}>
-                <NavLink to="/">
+                <NavLink to={`/project/${id}`}>
                     <BsPencil /> Editar
                 </NavLink>
                 <button onClick={remove}>
