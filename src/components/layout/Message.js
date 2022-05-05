@@ -1,4 +1,3 @@
-import { clear } from '@testing-library/user-event/dist/clear';
 import {useState, useEffect} from 'react';
 import styles from './Message.module.css';
 
