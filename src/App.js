@@ -15,7 +15,7 @@ const App = () => {
         <Navbar/>
 
         <Switch>
-          <Container customClass="min-height">
+          <Container >
             <Route exact path='/'>
               <Home />
             </Route>
