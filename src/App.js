@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom';
 import Home from "./components/pages/Home";
 import Contact from "./components/pages/Contact";
 import Company from "./components/pages/Company";
@@ -16,7 +16,7 @@ const App = () => {
           <NavLink to="/newproject">New Project</NavLink>
         </div>
 
-        <Routes>
+        <Switch>
           <Container customClass="min-height">
             <Route exact path='/'>
               <Home />
@@ -24,14 +24,14 @@ const App = () => {
             <Route exact path='/company'>
               <Company />
             </Route>
-            <Route exactpath='/contact'>
+            <Route exact path='/contact'>
               <Contact />
             </Route>
-            <Route exac={true} path='/newproject'>
+            <Route exact path='/newproject'>
               <NewProject />
             </Route>
           </Container>
-        </Routes>
+        </Switch>
         <p>Footer</p>
       </Router>
     )
