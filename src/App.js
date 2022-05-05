@@ -1,20 +1,18 @@
-import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from "./components/pages/Home";
 import Contact from "./components/pages/Contact";
 import Company from "./components/pages/Company";
 import NewProject from "./components/pages/NewProject";
+import Projects from "./components/pages/Projects";
 import Container from './components/layout/Container';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
 
 
 const App = () => {
     return (
       <Router>
-        <div>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/contact">Contato</NavLink>
-          <NavLink to="/company">Company</NavLink>
-          <NavLink to="/newproject">New Project</NavLink>
-        </div>
+        <Navbar/>
 
         <Switch>
           <Container customClass="min-height">
@@ -24,6 +22,9 @@ const App = () => {
             <Route exact path='/company'>
               <Company />
             </Route>
+            <Route exact path='/projects'>
+              <Projects />
+            </Route>
             <Route exact path='/contact'>
               <Contact />
             </Route>
@@ -32,7 +33,7 @@ const App = () => {
             </Route>
           </Container>
         </Switch>
-        <p>Footer</p>
+        <Footer />
       </Router>
     )
 }
