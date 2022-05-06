@@ -10,7 +10,7 @@ const Projectform = ({ handleSubmit, btnText, projectData }) => {
     const [project, setProject] = useState(projectData || {});
 
     useEffect(() => {
-        fetch('/categories', {
+        fetch('https://my-json-server.typicode.com/dgleyramos1/costs/categories', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'

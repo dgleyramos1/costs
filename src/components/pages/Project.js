@@ -24,7 +24,7 @@ const Project = () => {
 
     useEffect(() => {
         setTimeout(() => {
-            fetch(`/projects/${id}`, {
+            fetch(`https://my-json-server.typicode.com/dgleyramos1/costs/projects/${id}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -50,7 +50,7 @@ const Project = () => {
         projectUpdated.services = serviceUpdated;
         projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost);
 
-        fetch(`/projects/${projectUpdated.id}`,{
+        fetch(`https://my-json-server.typicode.com/dgleyramos1/costs/projects/${projectUpdated.id}`,{
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -86,7 +86,7 @@ const Project = () => {
 
         }
 
-        fetch(`/projects/${project.id}`, {
+        fetch(`https://my-json-server.typicode.com/dgleyramos1/costs/projects/${project.id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -128,7 +128,7 @@ const Project = () => {
         project.cost = newCost;
 
         //update project
-        fetch(`/projects/${project.id}`,{
+        fetch(`https://my-json-server.typicode.com/dgleyramos1/costs/projects/${project.id}`,{
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'

@@ -13,7 +13,7 @@ const Newproject = () => {
         project.cost = 0;
         project.services = [];
 
-        fetch('/projects', {
+        fetch('https://my-json-server.typicode.com/dgleyramos1/costs/projects', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
