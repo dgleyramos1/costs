@@ -40,6 +40,7 @@ const Project = () => {
     }, [id]);
 
     const removeService = (id, cost) => {
+        setMessage('')
         const serviceUpdated = project.services.filter(
             (service) => service.id !== id
         )

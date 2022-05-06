@@ -38,6 +38,7 @@ const Projects = () => {
     }, [])
 
     const removeProject = (id) => {
+        setProjectMessage('')
         fetch(`http://localhost:5000/projects/${id}`, {
             method: 'DELETE',
             headers: {
@@ -57,7 +58,7 @@ const Projects = () => {
         <div className={styles.project_container}>
             <div className={styles.title_container}>
                 <h1>Meus Projects</h1>
-                <LinkButton to="/newprojects" text="Criar novo projeto"></LinkButton>
+                <LinkButton to="/newproject" text="Criar novo projeto"></LinkButton>
             </div>
             {
                 message && <Message type="success" msg={message}/>
