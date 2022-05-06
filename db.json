@@ -7,15 +7,8 @@
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 200,
-      "services": [
-        {
-          "name": "teste serviço 1",
-          "cost": "200",
-          "description": "Testando a exibição do card service",
-          "id": "3fcdec23-536f-40bf-8e2e-b246f5c25fe2"
-        }
-      ],
+      "cost": 0,
+      "services": [],
       "id": 1
     },
     {
