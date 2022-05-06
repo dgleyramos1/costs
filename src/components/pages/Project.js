@@ -24,7 +24,7 @@ const Project = () => {
 
     useEffect(() => {
         setTimeout(() => {
-            fetch(`http://localhost:5000/projects/${id}`, {
+            fetch(`https://cost-dashboard.netlify.app/projects/${id}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -50,7 +50,7 @@ const Project = () => {
         projectUpdated.services = serviceUpdated;
         projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost);
 
-        fetch(`http://localhost:5000/projects/${projectUpdated.id}`,{
+        fetch(`https://cost-dashboard.netlify.app/projects/${projectUpdated.id}`,{
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -86,7 +86,7 @@ const Project = () => {
 
         }
 
-        fetch(`http://localhost:5000/projects/${project.id}`, {
+        fetch(`https://cost-dashboard.netlify.app/projects/${project.id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -128,7 +128,7 @@ const Project = () => {
         project.cost = newCost;
 
         //update project
-        fetch(`http://localhost:5000/projects/${project.id}`,{
+        fetch(`https://cost-dashboard.netlify.app/projects/${project.id}`,{
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
