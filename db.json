@@ -1,5 +1,36 @@
 {
-  "projects": [],
+  "projects": [
+    {
+      "name": "sadasdsadssdsadasd",
+      "budget": "213123123232313",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 438547,
+      "services": [
+        {
+          "name": "sadsadasd",
+          "cost": "213213",
+          "description": "dasdsad",
+          "id": "a48b893c-5d98-4c66-8499-3c48b0446693"
+        },
+        {
+          "name": "sadsadasd",
+          "cost": "213213",
+          "description": "dasdsad",
+          "id": "0e5a4a60-ebb4-4397-b4cc-4017cbcf6377"
+        },
+        {
+          "name": "dsadasda",
+          "cost": "12121",
+          "description": "sadasdas",
+          "id": "10f836f3-9a83-4d2c-9b98-81d759a160a0"
+        }
+      ],
+      "id": 2
+    }
+  ],
   "categories": [
     {
       "id": 1,

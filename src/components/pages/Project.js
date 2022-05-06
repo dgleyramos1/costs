@@ -24,7 +24,7 @@ const Project = () => {
 
     useEffect(() => {
         setTimeout(() => {
-            fetch(`https://my-json-server.typicode.com/dgleyramos1/costs/projects/${id}`, {
+            fetch(`http://localhost:5000/projects/${id}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -50,7 +50,7 @@ const Project = () => {
         projectUpdated.services = serviceUpdated;
         projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost);
 
-        fetch(`https://my-json-server.typicode.com/dgleyramos1/costs/projects/${projectUpdated.id}`,{
+        fetch(`http://localhost:5000/projects/${projectUpdated.id}`,{
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -86,7 +86,7 @@ const Project = () => {
 
         }
 
-        fetch(`https://my-json-server.typicode.com/dgleyramos1/costs/projects/${project.id}`, {
+        fetch(`http://localhost:5000/projects/${project.id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -128,7 +128,7 @@ const Project = () => {
         project.cost = newCost;
 
         //update project
-        fetch(`https://my-json-server.typicode.com/dgleyramos1/costs/projects/${project.id}`,{
+        fetch(`http://localhost:5000/projects/${project.id}`,{
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -136,7 +136,7 @@ const Project = () => {
             body: JSON.stringify(project)
         })
         .then(resp => resp.json())
-        .then(data => {
+        .then(() => {
             setShowServiceForm(false)
         })
         .catch(err => console.log(err))

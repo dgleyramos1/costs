@@ -22,7 +22,7 @@ const Projects = () => {
 
     useEffect(() =>{
         setTimeout(() => {
-            fetch('https://my-json-server.typicode.com/dgleyramos1/costs/projects', {
+            fetch('http://localhost:5000/projects', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -39,7 +39,7 @@ const Projects = () => {
 
     const removeProject = (id) => {
         setProjectMessage('')
-        fetch(`https://my-json-server.typicode.com/dgleyramos1/costs/projects/${id}`, {
+        fetch(`http://localhost:5000/projects/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
