@@ -13,7 +13,7 @@ const Newproject = () => {
         project.cost = 0;
         project.services = [];
 
-        fetch('https://cost-dashboard.netlify.app/projects', {
+        fetch('/projects', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

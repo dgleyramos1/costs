@@ -22,7 +22,7 @@ const Projects = () => {
 
     useEffect(() =>{
         setTimeout(() => {
-            fetch('https://cost-dashboard.netlify.app/projects', {
+            fetch('/projects', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -39,7 +39,7 @@ const Projects = () => {
 
     const removeProject = (id) => {
         setProjectMessage('')
-        fetch(`https://cost-dashboard.netlify.app/projects/${id}`, {
+        fetch(`/projects/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'

@@ -10,7 +10,7 @@ const Projectform = ({ handleSubmit, btnText, projectData }) => {
     const [project, setProject] = useState(projectData || {});
 
     useEffect(() => {
-        fetch('https://cost-dashboard.netlify.app/categories', {
+        fetch('/categories', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
